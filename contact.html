@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Circuit Builders</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    .faq-item.active .faq-content {
+      max-height: 1000px;
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    .faq-item .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    @keyframes slideDown {
+      0% {
+        max-height: 0;
+      }
+      100% {
+        max-height: 1000px;
+      }
+    }
+
+    .btn-primary {
+      @apply bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300;
+    }
+
+    .btn-primary:hover {
+      @apply bg-blue-700;
+    }
+
+    .text-primary {
+      @apply text-blue-600;
+    }
+
+    .text-primary:hover {
+      @apply text-blue-700;
+    }
+  </style>
+</head>
+<body class="font-inter">
+  <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-4">Contact Us</h1>
+      <p class="text-lg text-white mb-8">Get in touch with our team for support, feedback, or general inquiries.</p>
+      
+      <div class="bg-white rounded-lg shadow-lg p-8 sm:p-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Send us a message</h2>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-700 font-medium mb-1">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Enter your name">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Enter your email">
+            </div>
+            <div>
+              <label for="subject" class="block text-gray-700 font-medium mb-1">Subject</label>
+              <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                <option value="">Select a subject</option>
+                <option value="technical-support">Technical Support</option>
+                <option value="game-feedback">Game Feedback</option>
+                <option value="resource-request">Resource Request</option>
+                <option value="general-inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full px-6 py-3">
+              <i class="fas fa-paper-plane mr-2"></i> Send Message
+            </button>
+          </form>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Get in touch</h2>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-blue-600 mr-3"></i>
+              <a href="mailto:support@circuitbuilders.com" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">support@circuitbuilders.com</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
+              <a href="tel:+1-555-1234" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">+1 (555) 123-4567</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+              <span class="text-gray-700">123 Circuit Ave, Anytown USA</span>
+            </div>
+          </div>
+          
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold mb-4">Connect with us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-[#1DA1F2] hover:text-[#0C85D0] transition-colors duration-300">
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="#" class="text-[#E1306C] hover:text-[#C13584] transition-colors duration-300">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="#" class="text-[#FF0000] hover:text-[#CC0000] transition-colors duration-300">
+                <i class="fab fa-youtube fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="faq-item bg-white rounded-lg shadow-lg p-4 cursor-pointer hover:bg-gray-100 transition-colors duration-300">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-medium">How do I set up an account?</h3>
+          <i class="faq-icon fas fa-chevron-down text-gray-500"></i>
+        </div>
+        <div class="faq-content">
+          <div class="mt-4">
+            <p class="text-gray-700">To set up an account, visit the "Sign Up" page and fill out the registration form. You'll need to provide your name, email address, and create a password. Once your account is created, you can log in and start exploring the circuit-building game.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item bg-white rounded-lg shadow-lg p-4 cursor-pointer hover:bg-gray-100 transition-colors duration-300">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-medium">What resources are available?</h3>
+          <i class="faq-icon fas fa-chevron-down text-gray-500"></i>
+        </div>
+        <div class="faq-content">
+          <div class="mt-4">
+            <p class="text-gray-700">We have a variety of resources available, including tutorial videos, guides, and a knowledge base. You can find these by visiting the "Resources" page on our website. If you don't see what you're looking for, feel free to reach out to our support team.</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq-item bg-white rounded-lg shadow-lg p-4 cursor-pointer hover:bg-gray-100 transition-colors duration-300">
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl font-medium">How do I troubleshoot issues?</h3>
+          <i class="faq-icon fas fa-chevron-down text-gray-500"></i>
+        </div>
+        <div class="faq-content">
+          <div class="mt-4">
+            <p class="text-gray-700">If you're experiencing any issues with the game or your account, please start by checking our FAQ section and troubleshooting guide. If you can't find a solution, you can contact our support team, who will be happy to assist you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Stay Updated</h2>
+      <p class="text-gray-700 mb-8">Sign up for our newsletter to stay informed about new game challenges, educational resources, and more.</p>
+      <form class="flex items-center">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+        <button type="submit" class="btn-primary px-6 py-3 rounded-r-lg">
+          <i class="fas fa-paper-plane mr-2"></i> Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Add event listener for FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        item.querySelector('.faq-icon').classList.toggle('fa-chevron-down');
+        item.querySelector('.faq-icon').classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
+</body>
+</html> 
